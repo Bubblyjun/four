@@ -1,0 +1,94 @@
+@charset "utf-8"; *{ margin:0px; padding:0px; text-decoration:none; box-sizing:border-box; font-size:.14rem; font-style:normal; font-weight:normal; font-family:"黑体"; } ul,li{ list-style:none; } html{ -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; font-size:625%; } img,div,body,html,ul,li,a{ -webkit-touch-callout: none; } input,button{ outline:0; } button{ cursor:pointer; } input::-webkit-input-placeholder,textarea::-webkit-input-placeholder { color: #ccc;}
+$num:100%;
+%full{width:$num;height:$num;}
+@mixin nums($h:auto){width:$num;height:$h;}
+@mixin flex($j:space-between){display:flex;justify-content:$j;align-items:center;}
+html,body{@extend %full;}
+%text{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; } 
+%text2{ display:-webkit-box; word-break:break-all; -webkit-line-clamp:2; -webkit-box-orient:vertical; text-overflow:ellipsis; overflow:hidden; }
+.wrap{
+	@extend %full;
+	@include flex();
+	flex-direction:column;
+	overflow:hidden;
+}
+header{
+    @include nums($h:.9rem);
+   .top{
+        @include nums($h:.4rem);
+        @include flex();
+        background:skyblue;
+        color:#fff;
+        padding:0 .1rem;
+        a{
+            color:#fff;
+        }
+   }
+    .bottom{
+        @include nums($h:.4rem);
+        @include flex();
+        a{
+            flex:1;
+            text-align: center;
+            color:#333;
+            i.icon{
+                color:#666;
+            }
+        }
+    }
+}
+main{
+    flex:1;
+    overflow-y: scroll;
+    @include nums();
+    list{
+        @include nums();
+        dl{
+            @include nums($h:1.4rem);
+            border-top: 10px solid #eee;
+            @include flex();
+            padding:0 .1rem;
+            dt{
+                width:20%;
+                img{width:100%;height:auto;}
+            }
+            dd{
+                width:80%;
+                padding-left:.1rem;
+                h2{
+                    line-height: 30px;
+                    font-weight: bold;  
+                    font-size: 16px;
+                }
+                h4,h5{
+                    line-height: 30px;
+                    font-size:12px;
+                }
+                h5{border-bottom: solid 1px #ccc;}
+                p{
+                    @include nums($h:.3rem);
+                    @include flex();
+                    span,b{
+                        font-size:12px;
+                    }
+                    b{
+                        color:skyblue;
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    @include nums($h:.5rem);
+    @include flex();
+    a{
+        flex:1;
+        @include flex();
+        flex-direction: column;
+        color: #333;
+    }
+    a:nth-child(2){
+        color:skyblue;
+    }
+}

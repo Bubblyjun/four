@@ -1,0 +1,131 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: .14rem;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "黑体"; }
+
+ul, li {
+  list-style: none; }
+
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 625%; }
+
+img, div, body, html, ul, li, a {
+  -webkit-touch-callout: none; }
+
+input, button {
+  outline: 0; }
+
+button {
+  cursor: pointer; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #ccc; }
+
+html, body, .wrap {
+  width: 100%;
+  height: 100%; }
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; }
+
+header {
+  width: 100%;
+  height: 0.9rem; }
+  header .top {
+    width: 100%;
+    height: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: skyblue;
+    color: #fff;
+    padding: 0 .1rem; }
+    header .top a {
+      color: #fff; }
+  header .bottom {
+    width: 100%;
+    height: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header .bottom a {
+      flex: 1;
+      text-align: center;
+      color: #333; }
+      header .bottom a i.icon {
+        color: #666; }
+
+main {
+  flex: 1;
+  overflow-y: scroll;
+  width: 100%;
+  height: auto; }
+  main list {
+    width: 100%;
+    height: auto; }
+    main list dl {
+      width: 100%;
+      height: 1.4rem;
+      border-top: 10px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 .1rem; }
+      main list dl dt {
+        width: 20%; }
+        main list dl dt img {
+          width: 100%;
+          height: auto; }
+      main list dl dd {
+        width: 80%;
+        padding-left: .1rem; }
+        main list dl dd h2 {
+          line-height: 30px;
+          font-weight: bold;
+          font-size: 16px; }
+        main list dl dd h4, main list dl dd h5 {
+          line-height: 30px;
+          font-size: 12px; }
+        main list dl dd h5 {
+          border-bottom: solid 1px #ccc; }
+        main list dl dd p {
+          width: 100%;
+          height: 0.3rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          main list dl dd p span, main list dl dd p b {
+            font-size: 12px; }
+          main list dl dd p b {
+            color: skyblue; }
+
+footer {
+  width: 100%;
+  height: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  footer a {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: #333; }
+  footer a:nth-child(2) {
+    color: skyblue; }
+
+/*# sourceMappingURL=style.css.map */
